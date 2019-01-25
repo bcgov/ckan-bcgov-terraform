@@ -1,0 +1,13 @@
+.idea/
+terraform.tfvars
+terraform.tfstate
+terraform.tfstate.backup
+.terraform
+src/
+ckan_store/
+conf/
+db/ckan.dump
+logs/dlv.log
+solr/conf/
+solr/data/
+solr/core.properties
