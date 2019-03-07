@@ -61,6 +61,16 @@ module "dev"{
   ckanPlugins = "${var.ckanPlugins}"
   ckanVersion = "${var.ckanVersion}"
 
+  ssoAuthEndpoint = "${var.ssoAuthEndpoint}"
+	ssoRealm = "${var.ssoRealm}"
+	ssoClientId = "${var.ssoClientId}"
+	ssoClientSecret = "${var.ssoClientSecret}"
+	ssoSysadminGroup = "${var.ssoSysadminGroup}"
+	ssoGroupField = "${var.ssoGroupField}"
+	ssoUsernameField = "${var.ssoUsernameField}"
+	ssoEmailField = "${var.ssoEmailField}"
+	ssoNameField = "${var.ssoNameField}"
+
   gaID="${var.gaID}"
   gaAccount="${var.gaAccount}"
   gaUser="${var.gaUser}"
