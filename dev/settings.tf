@@ -17,11 +17,11 @@ resource "random_string" "geoApiKey"{
 }
 
 
-resource "local_file" "log_file" {
-  filename = "${local.logFolder}/dlv.log"
+# resource "local_file" "log_file" {
+#   filename = "${local.logFolder}/dlv.log"
 
-  content = ""
-}
+#   content = ""
+# }
 
 resource "local_file" "who_ini" {
   filename = "${local.confFolder}/who.ini"
@@ -183,6 +183,15 @@ ckan.extra_resource_fields = resource_storage_location
 #		Add ``resource_proxy`` to enable resorce proxying and get around the
 #		same origin policyhttp://127.0.0.1:5000/dataset
 ckan.plugins = ${local.ckanPlugins}
+ckan.sso.authorization_endpoint = ${local.ssoAuthEndpoint}
+ckan.sso.realm = ${local.ssoRealm}
+ckan.sso.client_id = ${local.ssoClientId}
+ckan.sso.client_secret = ${local.ssoClientSecret}
+ckan.sso.sysadmin_group_name = ${local.ssoSysadminGroup}
+ckan.sso.profile_group_field = ${local.ssoGroupField}
+ckan.sso.profile_username_field = ${local.ssoUsernameField}
+ckan.sso.profile_email_field = ${local.ssoEmailField}
+ckan.sso.profile_fullname_field = ${local.ssoNameField}
 
 
 scheming.dataset_schemas = ckanext.scheming:camel_photos.json

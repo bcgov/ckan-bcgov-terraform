@@ -117,6 +117,26 @@ module "ckanextRSSRepo" {
   vEnv = "${data.external.virtualEnv.result}"
 }
 
+module "ckanextSSORepo" {
+  source = "repository"
+  installPath = "${local.installPath}"
+  repoPath = "${local.ckanExtSSO}"
+  branch = "${local.ckanExtSSOBranch}"
+  preferFork = "${local.preferFork}"
+  gitUsername = "${local.gitUsername}"
+  vEnv = "${data.external.virtualEnv.result}"
+}
+
+module "ckanUIRepo" {
+  source = "repository"
+  installPath = "${local.installPath}"
+  repoPath = "${local.ckanUI}"
+  branch = "${local.ckanUIBranch}"
+  preferFork = "${local.preferFork}"
+  gitUsername = "${local.gitUsername}"
+  vEnv = "${data.external.virtualEnv.result}"
+}
+
 resource "null_resource" "finalTweaks"{
 //  provisioner "local-exec" {
 //    command = <<EOF

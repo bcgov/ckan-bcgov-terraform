@@ -134,6 +134,26 @@ variable "ckanExtDatapusherBranch"{
   default = "master"
 }
 
+variable "ckanExtSSO"{
+  type = "string"
+  default = "bcgov/ckanext-sso"
+}
+
+variable "ckanExtSSOBranch"{
+  type = "string"
+  default = "dev"
+}
+
+variable "ckanUI"{
+  type = "string"
+  default = "bcgov/ckan-ui"
+}
+
+variable "ckanUIBranch"{
+  type = "string"
+  default = "dev"
+}
+
 variable "solrRepo"{
   type = "string"
   default = "solr"
@@ -205,8 +225,53 @@ variable "ckanPlugins"{
 resource_proxy text_view recline_view recline_map_view recline_grid_view geo_view
 datastore datapusher recline_graph_view openapi_view pdf_view geojson_view
 edc_dataset edc_rss edc_app edc_geo edc_ngeo edc_webservice
-hierarchy_display hierarchy_form googleanalytics ga-report edc_disqus
+hierarchy_display hierarchy_form googleanalytics ga-report sso
 EOF
+}
+
+variable "ssoAuthEndpoint"{
+  type = "string"
+  default = ""
+}
+
+variable "ssoRealm"{
+  type = "string"
+  default = "ckan"
+}
+
+variable "ssoClientId"{
+  type = "string"
+  default = "ckan"
+}
+
+variable "ssoClientSecret"{
+  type = "string"
+  default = ""
+}
+
+variable "ssoSysadminGroup"{
+  type = "string"
+  default = "sysadmin"
+}
+	
+variable "ssoGroupField"{
+  type = "string"
+  default = "groups"
+}	
+	
+variable "ssoUsernameField"{
+  type = "string"
+  default = "preferred_username"
+}
+
+variable "ssoEmailField"{
+  type = "string"
+  default = "email"
+}
+
+variable "ssoNameField"{
+  type = "string"
+  default = "name"
 }
 
 variable "ckanVersion"{

@@ -66,6 +66,26 @@ variable "ckanExtRssBranch"{
   default = "master"
 }
 
+variable "ckanExtSSO"{
+  type = "string"
+  default = "bcgov/ckanext-sso"
+}
+
+variable "ckanExtSSOBranch"{
+  type = "string"
+  default = "dev"
+}
+
+variable "ckanUI"{
+  type = "string"
+  default = "bcgov/ckan-ui"
+}
+
+variable "ckanUIBranch"{
+  type = "string"
+  default = "dev"
+}
+
 
 //Forks that differ from base very slightly
 variable "ckanExtDisqus" {
@@ -206,8 +226,53 @@ variable "ckanPlugins"{
 resource_proxy text_view recline_view recline_map_view recline_grid_view geo_view
 datastore datapusher recline_graph_view openapi_view pdf_view geojson_view
 edc_dataset edc_rss edc_app edc_geo edc_ngeo edc_webservice
-hierarchy_display hierarchy_form googleanalytics ga-report edc_disqus
+hierarchy_display hierarchy_form googleanalytics ga-report sso
 EOF
+}
+
+variable "ssoAuthEndpoint"{
+  type = "string"
+  default = ""
+}
+
+variable "ssoRealm"{
+  type = "string"
+  default = "ckan"
+}
+
+variable "ssoClientId"{
+  type = "string"
+  default = "ckan"
+}
+
+variable "ssoClientSecret"{
+  type = "string"
+  default = ""
+}
+
+variable "ssoSysadminGroup"{
+  type = "string"
+  default = "sysadmin"
+}
+	
+variable "ssoGroupField"{
+  type = "string"
+  default = "groups"
+}	
+	
+variable "ssoUsernameField"{
+  type = "string"
+  default = "preferred_username"
+}
+
+variable "ssoEmailField"{
+  type = "string"
+  default = "email"
+}
+
+variable "ssoNameField"{
+  type = "string"
+  default = "name"
 }
 
 variable "ckanVersion"{
@@ -250,6 +315,12 @@ locals{
   ckanExtRss = "${var.ckanExtRss}"
   ckanExtRssBranch = "${var.ckanExtRssBranch}"
 
+	ckanExtSSO = "${var.ckanExtSSO}"
+  ckanExtSSOBranch = "${var.ckanExtSSOBranch}"
+
+	ckanUI = "${var.ckanUI}"
+  ckanUIBranch = "${var.ckanUIBranch}"
+
   ckanExtDisqus = "${var.ckanExtDisqus}"
   ckanExtDisqusBranch = "${var.ckanExtDisqusBranch}"
   ckanExtGaReport = "${var.ckanExtGaReport}"
@@ -286,6 +357,16 @@ locals{
   redisPort = "${var.redisPort}"
 
   ckanPlugins = "${var.ckanPlugins}"
+	ssoAuthEndpoint = "${var.ssoAuthEndpoint}"
+	ssoRealm = "${var.ssoRealm}"
+	ssoClientId = "${var.ssoClientId}"
+	ssoClientSecret = "${var.ssoClientSecret}"
+	ssoSysadminGroup = "${var.ssoSysadminGroup}"
+	ssoGroupField = "${var.ssoGroupField}"
+	ssoUsernameField = "${var.ssoUsernameField}"
+	ssoEmailField = "${var.ssoEmailField}"
+	ssoNameField = "${var.ssoNameField}"
+
   ckanVersion = "${var.ckanVersion}"
 
   confFolder = "${path.root}/${local.installPath}/conf"

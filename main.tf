@@ -30,6 +30,11 @@ module "dev"{
   ckanExtGoogleAnalyticsBranch = "${var.ckanExtGoogleAnalyticsBranch}"
   ckanExtHierarchy = "${var.ckanExtHierarchy}"
   ckanExtHierarchyBranch = "${var.ckanExtHierarchyBranch}"
+  ckanExtSSO = "${var.ckanExtSSO}"
+  ckanExtSSOBranch = "${var.ckanExtSSOBranch}"
+
+  ckanUI = "${var.ckanUI}"
+  ckanUIBranch = "${var.ckanUIBranch}"
 
   ckanExtDatapusher = "${var.ckanExtDatapusher}"
   ckanExtDatapusherBranch = "${var.ckanExtDatapusherBranch}"
