@@ -7,7 +7,7 @@ data "external" "virtualEnv"{
 }
 
 module "ckanRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   branch = "${local.ckanBranch}"
   repoPath = "${local.ckanRepo}"
@@ -17,7 +17,7 @@ module "ckanRepo" {
 }
 
 module "ckanextBcGovRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtBcGov}"
   branch = "${local.ckanExtBcGovBranch}"
@@ -27,7 +27,7 @@ module "ckanextBcGovRepo" {
 }
 
 module "ckanextBcGovCliRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtBcGovCli}"
   branch = "${local.ckanExtBcGovCliBranch}"
@@ -37,7 +37,7 @@ module "ckanextBcGovCliRepo" {
 }
 
 module "ckanextDisqusRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtDisqus}"
   branch = "${local.ckanExtDisqusBranch}"
@@ -47,7 +47,7 @@ module "ckanextDisqusRepo" {
 }
 
 module "ckanextGaReportRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtGaReport}"
   branch = "${local.ckanExtGaReportBranch}"
@@ -57,7 +57,7 @@ module "ckanextGaReportRepo" {
 }
 
 module "ckanextGeoviewRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtGeoview}"
   branch = "${local.ckanExtGeoviewBranch}"
@@ -67,7 +67,7 @@ module "ckanextGeoviewRepo" {
 }
 
 module "ckanextGoogleAnalyticsRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtGoogleAnalytics}"
   branch = "${local.ckanExtGoogleAnalyticsBranch}"
@@ -77,7 +77,7 @@ module "ckanextGoogleAnalyticsRepo" {
 }
 
 module "ckanextHierarchyRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtHierarchy}"
   branch = "${local.ckanExtHierarchyBranch}"
@@ -87,7 +87,7 @@ module "ckanextHierarchyRepo" {
 }
 
 module "ckanextOpenApiViewerRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtOpenApiViewer}"
   branch = "${local.ckanExtOpenApiViewerBranch}"
@@ -97,7 +97,7 @@ module "ckanextOpenApiViewerRepo" {
 }
 
 module "ckanextDatapusherRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtDatapusher}"
   branch = "${local.ckanExtDatapusherBranch}"
@@ -107,7 +107,7 @@ module "ckanextDatapusherRepo" {
 }
 
 module "ckanextRSSRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtRss}"
   branch = "${local.ckanExtRssBranch}"
@@ -118,7 +118,7 @@ module "ckanextRSSRepo" {
 }
 
 module "ckanextSSORepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanExtSSO}"
   branch = "${local.ckanExtSSOBranch}"
@@ -128,7 +128,7 @@ module "ckanextSSORepo" {
 }
 
 module "ckanUIRepo" {
-  source = "repository"
+  source = "./repository"
   installPath = "${local.installPath}"
   repoPath = "${local.ckanUI}"
   branch = "${local.ckanUIBranch}"
