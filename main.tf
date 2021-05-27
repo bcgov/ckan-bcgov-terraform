@@ -1,77 +1,77 @@
-module "dev"{
-  source = "dev"
+module "dev" {
+  source = "./dev"
 
-  gitUsername = "${var.gitUsername}"
-  preferFork = "${var.preferFork}"
+  gitUsername = var.gitUsername
+  preferFork  = var.preferFork
 
-  installPath = "${var.installPath}"
+  installPath = var.installPath
 
-  ckanRepo = "${var.ckanRepo}"
-  ckanBranch = "${var.ckanBranch}"
+  ckanRepo   = var.ckanRepo
+  ckanBranch = var.ckanBranch
 
-  ckanExtBcGov = "${var.ckanExtBcGov}"
-  ckanExtBcGovBranch = "${var.ckanExtBcGovBranch}"
-  ckanExtBcGovCli = "${var.ckanExtBcGovCli}"
-  ckanExtBcGovCliBranch = "${var.ckanExtBcGovCliBranch}"
-  ckanExtOpenApiViewer = "${var.ckanExtOpenApiViewer}"
-  ckanExtOpenApiViewerBranch = "${var.ckanExtOpenApiViewerBranch}"
+  ckanExtBcGov               = var.ckanExtBcGov
+  ckanExtBcGovBranch         = var.ckanExtBcGovBranch
+  ckanExtBcGovCli            = var.ckanExtBcGovCli
+  ckanExtBcGovCliBranch      = var.ckanExtBcGovCliBranch
+  ckanExtOpenApiViewer       = var.ckanExtOpenApiViewer
+  ckanExtOpenApiViewerBranch = var.ckanExtOpenApiViewerBranch
 
-  ckanExtRssSource = "${var.ckanExtRssSource}"
-  ckanExtRss = "${var.ckanExtRss}"
-  ckanExtRssBranch = "${var.ckanExtRssBranch}"
+  ckanExtRssSource = var.ckanExtRssSource
+  ckanExtRss       = var.ckanExtRss
+  ckanExtRssBranch = var.ckanExtRssBranch
 
-  ckanExtDisqus = "${var.ckanExtDisqus}"
-  ckanExtDisqusBranch = "${var.ckanExtDisqusBranch}"
-  ckanExtGaReport = "${var.ckanExtGaReport}"
-  ckanExtGaReportBranch = "${var.ckanExtGaReportBranch}"
-  ckanExtGeoview = "${var.ckanExtGeoview}"
-  ckanExtGeoviewBranch = "${var.ckanExtGeoviewBranch}"
-  ckanExtGoogleAnalytics = "${var.ckanExtGoogleAnalytics}"
-  ckanExtGoogleAnalyticsBranch = "${var.ckanExtGoogleAnalyticsBranch}"
-  ckanExtHierarchy = "${var.ckanExtHierarchy}"
-  ckanExtHierarchyBranch = "${var.ckanExtHierarchyBranch}"
-  ckanExtSSO = "${var.ckanExtSSO}"
-  ckanExtSSOBranch = "${var.ckanExtSSOBranch}"
+  ckanExtDisqus                = var.ckanExtDisqus
+  ckanExtDisqusBranch          = var.ckanExtDisqusBranch
+  ckanExtGaReport              = var.ckanExtGaReport
+  ckanExtGaReportBranch        = var.ckanExtGaReportBranch
+  ckanExtGeoview               = var.ckanExtGeoview
+  ckanExtGeoviewBranch         = var.ckanExtGeoviewBranch
+  ckanExtGoogleAnalytics       = var.ckanExtGoogleAnalytics
+  ckanExtGoogleAnalyticsBranch = var.ckanExtGoogleAnalyticsBranch
+  ckanExtHierarchy             = var.ckanExtHierarchy
+  ckanExtHierarchyBranch       = var.ckanExtHierarchyBranch
+  ckanExtSSO                   = var.ckanExtSSO
+  ckanExtSSOBranch             = var.ckanExtSSOBranch
 
-  ckanUI = "${var.ckanUI}"
-  ckanUIBranch = "${var.ckanUIBranch}"
+  ckanUI       = var.ckanUI
+  ckanUIBranch = var.ckanUIBranch
 
-  ckanExtDatapusher = "${var.ckanExtDatapusher}"
-  ckanExtDatapusherBranch = "${var.ckanExtDatapusherBranch}"
+  ckanExtDatapusher       = var.ckanExtDatapusher
+  ckanExtDatapusherBranch = var.ckanExtDatapusherBranch
 
-  solrRepo = "${var.solrRepo}"
-  solrTag = "${var.solrTag}"
+  solrRepo = var.solrRepo
+  solrTag  = var.solrTag
 
-  postgresRepo = "${var.postgresRepo}"
-  postgresTag = "${var.postgresTag}"
+  postgresRepo = var.postgresRepo
+  postgresTag  = var.postgresTag
 
-  redisRepo = "${var.redisRepo}"
-  redisTag = "${var.redisTag}"
+  redisRepo = var.redisRepo
+  redisTag  = var.redisTag
 
-  solrCore = "${var.solrCore}"
-  solrPort = "${var.solrPort}"
+  solrCore = var.solrCore
+  solrPort = var.solrPort
 
-  postgresDb = "${var.postgresDb}"
-  postgresUser = "${var.postgresUser}"
-  postgresPass = "${var.postgresPass}"
-  postgresPort = "${var.postgresPort}"
+  postgresDb   = var.postgresDb
+  postgresUser = var.postgresUser
+  postgresPass = var.postgresPass
+  postgresPort = var.postgresPort
 
-  redisPort = "${var.redisPort}"
+  redisPort = var.redisPort
 
-  ckanPlugins = "${var.ckanPlugins}"
-  ckanVersion = "${var.ckanVersion}"
+  ckanPlugins = var.ckanPlugins
+  ckanVersion = var.ckanVersion
 
-  ssoAuthEndpoint = "${var.ssoAuthEndpoint}"
-	ssoRealm = "${var.ssoRealm}"
-	ssoClientId = "${var.ssoClientId}"
-	ssoClientSecret = "${var.ssoClientSecret}"
-	ssoSysadminGroup = "${var.ssoSysadminGroup}"
-	ssoGroupField = "${var.ssoGroupField}"
-	ssoUsernameField = "${var.ssoUsernameField}"
-	ssoEmailField = "${var.ssoEmailField}"
-	ssoNameField = "${var.ssoNameField}"
+  ssoAuthEndpoint  = var.ssoAuthEndpoint
+  ssoRealm         = var.ssoRealm
+  ssoClientId      = var.ssoClientId
+  ssoClientSecret  = var.ssoClientSecret
+  ssoSysadminGroup = var.ssoSysadminGroup
+  ssoGroupField    = var.ssoGroupField
+  ssoUsernameField = var.ssoUsernameField
+  ssoEmailField    = var.ssoEmailField
+  ssoNameField     = var.ssoNameField
 
-  gaID="${var.gaID}"
-  gaAccount="${var.gaAccount}"
-  gaUser="${var.gaUser}"
+  gaID      = var.gaID
+  gaAccount = var.gaAccount
+  gaUser    = var.gaUser
 }
