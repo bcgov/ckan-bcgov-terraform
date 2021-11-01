@@ -1,3 +1,5 @@
+[![Lifecycle:Dormant](https://img.shields.io/badge/Lifecycle-Dormant-ff7f2a)](<Redirect-URL>)
+
 # CKAN Terraform
 The purpose of this repo is to install a version of CKAN for development, an assumption is made
 that you are working on the catalogue but with some tweaks it could work for any version of ckan.
